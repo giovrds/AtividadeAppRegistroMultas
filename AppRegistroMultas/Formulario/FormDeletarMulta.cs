@@ -45,6 +45,7 @@ namespace AppRegistroMultas.Formulario
 
                 MessageBox.Show($"ID:{multaSelecionada.Id} ATUALIZADO COM SUCESSO!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                cbVeiculo.SelectedIndex = -1;
                 txtMarca.Clear();
                 txtModelo.Clear();
                 txtPlaca.Clear();

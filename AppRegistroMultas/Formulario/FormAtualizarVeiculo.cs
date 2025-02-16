@@ -55,6 +55,8 @@ namespace AppRegistroMultas.Formulario
                 VeiculoContext context = new VeiculoContext();
                 context.AtualizarVeiculo(veiculosSelec);
                 MessageBox.Show($"ID:{(veiculosSelec.Id).ToString()} " + "ATUALIZADO COM SUCESSO!", "2ºA INF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                comboBox1.SelectedIndex = -1;
                 txtMarca.Clear(); txtModelo.Clear(); txtPlaca.Clear();
             }
         }
