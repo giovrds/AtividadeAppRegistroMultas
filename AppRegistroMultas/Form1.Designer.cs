@@ -34,8 +34,8 @@
             this.btAtualizar = new System.Windows.Forms.Button();
             this.btAtualizarMulta = new System.Windows.Forms.Button();
             this.btDeletarMulta = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btConsulta
@@ -110,17 +110,6 @@
             this.btDeletarMulta.UseVisualStyleBackColor = true;
             this.btDeletarMulta.Click += new System.EventHandler(this.btDeletarMulta_Click);
             // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(86, 349);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(531, 20);
-            this.label7.TabIndex = 73;
-            this.label7.Text = "Giovanna Rodrigues de Souza - 2ºA Informática";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -131,6 +120,17 @@
             this.label1.TabIndex = 74;
             this.label1.Text = "Dhuliana Paula de Assis Geronimo - 2ºA Informática";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(86, 349);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(531, 20);
+            this.label7.TabIndex = 73;
+            this.label7.Text = "Giovanna Rodrigues de Souza - 2ºA Informática";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -159,8 +159,8 @@
         private System.Windows.Forms.Button btAtualizar;
         private System.Windows.Forms.Button btAtualizarMulta;
         private System.Windows.Forms.Button btDeletarMulta;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
     }
 }
 

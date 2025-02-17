@@ -64,32 +64,26 @@ namespace AppRegistroMultas.Formulario
                 txtDescricao.Text = multaSelecionada.Descricao;
                 txtValor.Text = multaSelecionada.ValorMulta.ToString("N2");
 
-                CarregarVeiculos(multaSelecionada.VeiculoId);
+                VeiculoContext veiculoContext = new VeiculoContext();
+                var veiculo = veiculoContext.ListarVeiculos().FirstOrDefault(v => v.Id == multaSelecionada.VeiculoId);
+
+                if (veiculo != null)
+                {
+                    txtModelo.Text = veiculo.Modelo;
+                    txtMarca.Text = veiculo.Marca;
+                    txtPlaca.Text = veiculo.Placa;
+                }
+                else
+                {
+                    txtModelo.Clear();
+                    txtMarca.Clear();
+                    txtPlaca.Clear();
+                }
             }
             else
             {
                 txtDescricao.Clear();
                 txtValor.Clear();
-                txtModelo.Clear();
-                txtMarca.Clear();
-                txtPlaca.Clear();
-            }
-        }
- 
-
-        private void CarregarVeiculos(int veiculoId)
-        {
-            VeiculoContext veiculoContext = new VeiculoContext();
-            var veiculo = veiculoContext.ListarVeiculos().FirstOrDefault(v => v.Id == veiculoId);
-
-            if (veiculo != null)
-            {
-                txtModelo.Text = veiculo.Modelo;
-                txtMarca.Text = veiculo.Marca;
-                txtPlaca.Text = veiculo.Placa;
-            }
-            else
-            {
                 txtModelo.Clear();
                 txtMarca.Clear();
                 txtPlaca.Clear();
