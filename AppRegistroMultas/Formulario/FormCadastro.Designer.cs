@@ -81,7 +81,7 @@
             // 
             // btSalvar
             // 
-            this.btSalvar.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btSalvar.BackColor = System.Drawing.Color.Honeydew;
             this.btSalvar.Font = new System.Drawing.Font("Britannic Bold", 12F);
             this.btSalvar.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.btSalvar.Location = new System.Drawing.Point(319, 180);

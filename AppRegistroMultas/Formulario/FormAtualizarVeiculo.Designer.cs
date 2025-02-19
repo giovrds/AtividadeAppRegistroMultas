@@ -53,7 +53,7 @@
             this.btAtualizar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btAtualizar.Size = new System.Drawing.Size(231, 62);
             this.btAtualizar.TabIndex = 27;
-            this.btAtualizar.Text = "ATUALIZAR REGISTRO";
+            this.btAtualizar.Text = "ATUALIZAR VEÍCULO";
             this.btAtualizar.UseVisualStyleBackColor = false;
             this.btAtualizar.Click += new System.EventHandler(this.btAtualizar_Click);
             // 
