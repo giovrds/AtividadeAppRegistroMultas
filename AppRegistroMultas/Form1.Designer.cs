@@ -65,7 +65,7 @@
             this.btCadastroMulta.Name = "btCadastroMulta";
             this.btCadastroMulta.Size = new System.Drawing.Size(247, 33);
             this.btCadastroMulta.TabIndex = 31;
-            this.btCadastroMulta.Text = "CADASTRO DE MULTAS";
+            this.btCadastroMulta.Text = "CADASTRAR MULTAS";
             this.btCadastroMulta.UseVisualStyleBackColor = false;
             this.btCadastroMulta.Click += new System.EventHandler(this.btCadastroMulta_Click);
             // 
