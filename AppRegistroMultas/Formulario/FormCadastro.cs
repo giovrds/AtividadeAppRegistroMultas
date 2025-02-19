@@ -21,8 +21,10 @@ namespace AppRegistroMultas.Formulario
 
         private void btCancelar_Click(object sender, EventArgs e)
         {
-           txtMarca.Clear();txtModelo.Clear();
-           txtPlaca.Clear();txtModelo.Select(); 
+           txtMarca.Clear();
+           txtModelo.Clear();
+           txtPlaca.Clear();
+           txtModelo.Select(); 
         }
 
         private void btSalvar_Click(object sender, EventArgs e)
@@ -31,16 +33,15 @@ namespace AppRegistroMultas.Formulario
             veiculo.Modelo = txtModelo.Text;
             veiculo.Marca = txtMarca.Text;    
             veiculo.Placa = txtPlaca.Text;  
-            //veiculo.Id = idVeiculo;//chave primária
-            //Context.ListaVeiculos.Add(veiculo);
-            //idVeiculo++; 
+
             VeiculoContext veiculoContext = new VeiculoContext();
             veiculoContext.InserirVeiculo(veiculo);
 
             MessageBox.Show("SALVO COM SUCESSO","2A INF",MessageBoxButtons.OK, MessageBoxIcon.Information);
-            txtMarca.Clear(); txtModelo.Clear();
-            txtPlaca.Clear(); txtModelo.Select();
-
+            txtMarca.Clear(); 
+            txtModelo.Clear();
+            txtPlaca.Clear();
+            txtModelo.Select();
         }
     }
 }

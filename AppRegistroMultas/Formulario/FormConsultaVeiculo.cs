@@ -44,8 +44,7 @@ namespace AppRegistroMultas.Formulario
                 txtPlaca.Text = veiculo.Placa;
                 
                 var listaMultasVinc = listaMulta.Where(m=>m.VeiculoId == veiculo.Id).ToList();
-                //selecionar multas vinculas ao veículo selecionado 
-                dtTabela.DataSource = listaMultasVinc.ToList();//mostrar na tabela
+                dtTabela.DataSource = listaMultasVinc.ToList();
             }
             cont++;
         }

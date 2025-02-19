@@ -14,20 +14,18 @@ namespace AppRegistroMultas.Formulario
 {
     public partial class FormDeletarMulta : Form
     {
-        private List<Veiculo> listaVeiculos = new List<Veiculo>();
         private List<Multa> listaMultas = new List<Multa>();
 
         public FormDeletarMulta()
         {
             InitializeComponent();
-            //listaVeiculos = Context.ListaVeiculos.ToList();
             MultaContext context = new MultaContext();
             listaMultas = context.ListarMultas();
 
             cbVeiculo.DataSource = listaMultas.ToList();
             cbVeiculo.DisplayMember = "Descricao";
             cbVeiculo.ValueMember = "Id";
-            cbVeiculo.SelectedIndex = -1; //combobox em branco
+            cbVeiculo.SelectedIndex = -1; 
         }
 
         private void btDeletar_Click(object sender, EventArgs e)
@@ -36,14 +34,15 @@ namespace AppRegistroMultas.Formulario
             {
                 int idMultaSelecionada = (int)cbVeiculo.SelectedValue;
 
-                var multaSelecionada = listaMultas.FirstOrDefault(m => m.Id == idMultaSelecionada);
+                var multaSelecionada = listaMultas.
+                    FirstOrDefault(m => m.Id == idMultaSelecionada);
                 multaSelecionada.ValorMulta = Convert.ToDecimal(txtValor.Text);
                 multaSelecionada.Descricao = txtDescricao.Text;
 
                 MultaContext context = new MultaContext();
                 context.DeletarMulta(multaSelecionada);
 
-                MessageBox.Show($"ID:{multaSelecionada.Id} ATUALIZADO COM SUCESSO!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"ID:{multaSelecionada.Id} ATUALIZADO COM SUCESSO!", "2AINF", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 cbVeiculo.SelectedIndex = -1;
                 txtMarca.Clear();

@@ -23,8 +23,8 @@ namespace AppRegistroMultas.Formulario
         public FormCadastroMulta()
         {
             InitializeComponent();
-          //listaVeiculos = Context.ListaVeiculos.ToList();
-           VeiculoContext context = new VeiculoContext();
+
+            VeiculoContext context = new VeiculoContext();
             listaVeiculos = context.ListarVeiculos();
             cbVeiculo.DataSource = listaVeiculos.ToList();
             cbVeiculo.DisplayMember = "Placa";
@@ -34,6 +34,7 @@ namespace AppRegistroMultas.Formulario
         private void cbVeiculo_SelectedIndexChanged(object sender, EventArgs e)
         {
             int linhaSelec = cbVeiculo.SelectedIndex;
+
             if(linhaSelec>-1 && cont > 1)
             {
                 var veiculo = listaVeiculos[linhaSelec]; 
@@ -52,7 +53,9 @@ namespace AppRegistroMultas.Formulario
             multa.ValorMulta = Convert.ToDecimal(txtValor.Text);
             multa.Id = idMulta; //chave primária da multa
             multa.VeiculoId = idVeiculo;//chave estrangeira => vínculo da multa com o veículo
+
             listaMultasTemp.Add(multa);
+
             idMulta++; //gerar a chave primária 
             dtTabela.DataSource = listaMultasTemp.ToList();//exibir na tabela
             txtDescricao.Clear();
@@ -72,12 +75,6 @@ namespace AppRegistroMultas.Formulario
         {
             MultaContext multaContext = new MultaContext();
 
-            if (listaMultasTemp.Count == 0)
-            {
-                MessageBox.Show("Nenhuma multa para salvar!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             foreach (var multa in listaMultasTemp)
             {
                 multaContext.InserirMulta(multa);
@@ -90,12 +87,11 @@ namespace AppRegistroMultas.Formulario
             txtMarca.Clear();
             txtModelo.Clear();
             txtPlaca.Clear();
-            cbVeiculo.SelectedIndex = -1; 
 
+            cbVeiculo.SelectedIndex = -1; 
             listaMultasTemp.Clear(); 
             dtTabela.DataSource = null; 
             dtTabela.DataSource = listaMultasTemp.ToList();
-
         }
 
     }

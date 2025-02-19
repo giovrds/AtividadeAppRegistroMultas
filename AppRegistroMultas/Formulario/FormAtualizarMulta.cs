@@ -16,43 +16,18 @@ namespace AppRegistroMultas.Formulario
 {
     public partial class FormAtualizarMulta : Form
     {
-        private List<Veiculo> listaVeiculos = new List<Veiculo>();
         private List<Multa> listaMultas = new List<Multa>();
 
         public FormAtualizarMulta()
         {
             InitializeComponent();
-            //listaVeiculos = Context.ListaVeiculos.ToList();
             MultaContext context = new MultaContext();
             listaMultas = context.ListarMultas();
 
             cbVeiculo.DataSource = listaMultas.ToList();
             cbVeiculo.DisplayMember = "Descricao";
             cbVeiculo.ValueMember = "Id";
-            cbVeiculo.SelectedIndex = -1; //combobox em branco
-        }
-
-        private void btAtualizar_Click(object sender, EventArgs e)
-        {
-            if (cbVeiculo.SelectedIndex > -1)
-            {
-                int idMultaSelecionada = (int)cbVeiculo.SelectedValue;
-                var multaSelecionada = listaMultas.FirstOrDefault(m => m.Id == idMultaSelecionada);
-                multaSelecionada.ValorMulta = Convert.ToDecimal(txtValor.Text);
-                multaSelecionada.Descricao = txtDescricao.Text;
-
-                MultaContext context = new MultaContext();
-                context.AtualizarMulta(multaSelecionada);
-
-                MessageBox.Show($"ID:{multaSelecionada.Id} ATUALIZADO COM SUCESSO!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                cbVeiculo.SelectedIndex = -1;
-                txtMarca.Clear();
-                txtModelo.Clear();
-                txtPlaca.Clear();
-                txtDescricao.Clear();
-                txtValor.Clear();
-            }
+            cbVeiculo.SelectedIndex = -1;
         }
 
         private void cbVeiculo_SelectedIndexChanged(object sender, EventArgs e)
@@ -65,7 +40,9 @@ namespace AppRegistroMultas.Formulario
                 txtValor.Text = multaSelecionada.ValorMulta.ToString("N2");
 
                 VeiculoContext veiculoContext = new VeiculoContext();
-                var veiculo = veiculoContext.ListarVeiculos().FirstOrDefault(v => v.Id == multaSelecionada.VeiculoId);
+                var veiculo = veiculoContext.
+                    ListarVeiculos().
+                    FirstOrDefault(v => v.Id == multaSelecionada.VeiculoId);
 
                 if (veiculo != null)
                 {
@@ -87,6 +64,30 @@ namespace AppRegistroMultas.Formulario
                 txtModelo.Clear();
                 txtMarca.Clear();
                 txtPlaca.Clear();
+            }
+        }
+
+        private void btAtualizar_Click(object sender, EventArgs e)
+        {
+            if (cbVeiculo.SelectedIndex > -1)
+            {
+                int idMultaSelecionada = (int)cbVeiculo.SelectedValue;
+                var multaSelecionada = listaMultas.
+                    FirstOrDefault(m => m.Id == idMultaSelecionada);
+                multaSelecionada.ValorMulta = Convert.ToDecimal(txtValor.Text);
+                multaSelecionada.Descricao = txtDescricao.Text;
+
+                MultaContext context = new MultaContext();
+                context.AtualizarMulta(multaSelecionada);
+
+                MessageBox.Show($"ID:{multaSelecionada.Id} ATUALIZADO COM SUCESSO!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                cbVeiculo.SelectedIndex = -1;
+                txtMarca.Clear();
+                txtModelo.Clear();
+                txtPlaca.Clear();
+                txtDescricao.Clear();
+                txtValor.Clear();
             }
         }
     }

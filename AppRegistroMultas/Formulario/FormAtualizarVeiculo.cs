@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppRegistroMultas.Models;
-using AppRegistroMultas.Contexto;
 
 namespace AppRegistroMultas.Formulario
 {
@@ -21,6 +20,7 @@ namespace AppRegistroMultas.Formulario
         public FormAtualizarVeiculo()
         {
             InitializeComponent();
+
             VeiculoContext veiculo = new VeiculoContext();
             ListaVeiculos = veiculo.ListarVeiculos();
 
@@ -32,6 +32,7 @@ namespace AppRegistroMultas.Formulario
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             var linhaSelec = comboBox1.SelectedIndex;
+
             if (linhaSelec > -1 && contExc > 0)
             {
                 var veiculosSelec = ListaVeiculos[linhaSelec];
@@ -45,6 +46,7 @@ namespace AppRegistroMultas.Formulario
         private void btAtualizar_Click(object sender, EventArgs e)
         {
             var linhaSelec = comboBox1.SelectedIndex;
+
             if (linhaSelec > -1 && contExc > 0)
             {
                 var veiculosSelec = ListaVeiculos[linhaSelec];
@@ -57,7 +59,9 @@ namespace AppRegistroMultas.Formulario
                 MessageBox.Show($"ID:{(veiculosSelec.Id).ToString()} " + "ATUALIZADO COM SUCESSO!", "2ºA INF", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 comboBox1.SelectedIndex = -1;
-                txtMarca.Clear(); txtModelo.Clear(); txtPlaca.Clear();
+                txtMarca.Clear();
+                txtModelo.Clear();
+                txtPlaca.Clear();
             }
         }
     }
