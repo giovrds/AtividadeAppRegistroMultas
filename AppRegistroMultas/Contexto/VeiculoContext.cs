@@ -25,15 +25,14 @@ namespace AppRegistroMultas.Contexto
 
         public List<Veiculo> ListarVeiculos()
         {
-            List<Veiculo> listaVeiculosParaExportar = new List<Veiculo>();// para retornar (return) o resutaldo e ser utilizado na aplicação
-            string sql = "SELECT * FROM VEICULO"; //consulta SQL para trazer todas as pessoas
+            List<Veiculo> listaVeiculosParaExportar = new List<Veiculo>();
+            string sql = "SELECT * FROM VEICULO";
             try
             {
-                MySqlCommand comando = new MySqlCommand(sql, conexao);//objeto "comando" responsável por ir até o banco e realizar ações
-                conexao.Open();//abrir a porta do banco para realizar a consulta
-                MySqlDataReader dados = comando.ExecuteReader(); //"comando" vai realizar a consulta e enviar tudo para dentro do objeto "dados"
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+                conexao.Open();
+                MySqlDataReader dados = comando.ExecuteReader(); 
 
-                //laço responsável por percorrer todos os registros que estão dentro do objeto "dados"
                 while (dados.Read())
                 {
                     Veiculo veiculo = new Veiculo();
@@ -43,30 +42,29 @@ namespace AppRegistroMultas.Contexto
                     veiculo.Placa = dados["Placa"].ToString();
                     listaVeiculosParaExportar.Add(veiculo);
                 }
-                conexao.Close(); // Fechar a porta do banco após resultado da consulta         
+                conexao.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
-            return listaVeiculosParaExportar; //retornar o resultado (exportar para aplicação)
+            return listaVeiculosParaExportar;
         }//fim do método para consultar e listar Veículos
 
         public void InserirVeiculo(Veiculo veiculo)
         {
-            string sql = "INSERT INTO VEICULO (Placa, Modelo, Marca) VALUES (@Placa,@Modelo, @Marca)"; //para inserir uma pessoa no banco
+            string sql = "INSERT INTO VEICULO (Placa, Modelo, Marca) VALUES (@Placa,@Modelo, @Marca)"; 
 
             try
             {
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
 
-                // Adicionando parâmetros para evitar SQL Injection
                 comando.Parameters.AddWithValue("@Placa", veiculo.Placa);
                 comando.Parameters.AddWithValue("@Modelo", veiculo.Modelo);
                 comando.Parameters.AddWithValue("@Marca", veiculo.Marca);
 
-                conexao.Open(); // Abrir as portas do banco
-                int LinhasAfestadas = comando.ExecuteNonQuery(); //executa o comando e mostrar quantas linhas foran afetadas
+                conexao.Open();
+                int LinhasAfestadas = comando.ExecuteNonQuery();
             }
 
             catch (Exception ex)
@@ -76,26 +74,25 @@ namespace AppRegistroMultas.Contexto
 
             finally
             {
-                conexao.Close(); // Fecha as portas do banco, mesmo que ocorra erro
+                conexao.Close();
             }
         }//fim do método para inserir veículos
 
         public void AtualizarVeiculo(Veiculo veiculo)
-        {            // Comando SQL para atualizar os dados da pessoa
+        {
             string sql = "UPDATE VEICULO SET Placa = @Placa, Modelo = @Modelo, Marca = @Marca WHERE Id = @Id";
 
             try
             {
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
 
-                // Adicionando parâmetros para evitar SQL Injection
                 comando.Parameters.AddWithValue("@Placa", veiculo.Placa);
                 comando.Parameters.AddWithValue("@Modelo", veiculo.Modelo);
                 comando.Parameters.AddWithValue("@Marca", veiculo.Marca);
                 comando.Parameters.AddWithValue("@Id", veiculo.Id);
 
-                conexao.Open(); // Abrir as portas do banco
-                int LinhasAfestadas = comando.ExecuteNonQuery(); // Executa o comando e retorna quantas linhas foran afetadas
+                conexao.Open();
+                int LinhasAfestadas = comando.ExecuteNonQuery();
 
                 if (LinhasAfestadas > 0)
                 {
@@ -115,10 +112,45 @@ namespace AppRegistroMultas.Contexto
 
             finally
             {
-                conexao.Close(); // Fecha a conexao com o banco
+                conexao.Close();
             }
         } // fim do Atualizar veiculo
 
-    }//fim da classe
+        public void DeletarVeiculo(Veiculo veiculo)
+        {
+            string sql = "DELETE FROM VEICULO WHERE Id = @Id";
+
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@Placa", veiculo.Placa);
+                comando.Parameters.AddWithValue("@Modelo", veiculo.Modelo);
+                comando.Parameters.AddWithValue("@Marca", veiculo.Marca);
+                comando.Parameters.AddWithValue("@Id", veiculo.Id);
+
+                conexao.Open();
+                int LinhasAfestadas = comando.ExecuteNonQuery();
+
+                if (LinhasAfestadas > 0)
+                {
+                    MessageBox.Show("Veículo atualizada com sucesso!");
+                }
+                else
+                {
+                    MessageBox.Show("Nenhum registro foi atualizado. Verifique o ID informado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao atualizar veículo: " + ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        } // fim do deletar veiculo
+
+    }//fim da classe VeiculoContext
 
 }//fim do namespace

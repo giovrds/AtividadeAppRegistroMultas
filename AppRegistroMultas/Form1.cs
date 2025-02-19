@@ -53,5 +53,11 @@ namespace AppRegistroMultas
             FormDeletarMulta form = new FormDeletarMulta();
             form.ShowDialog();
         }
+
+        private void btDeletarVeiculo_Click(object sender, EventArgs e)
+        {
+            FormDeletarVeiculo form = new FormDeletarVeiculo();
+            form.ShowDialog();
+        }
     }
 }

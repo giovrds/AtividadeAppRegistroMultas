@@ -52,7 +52,7 @@
             // txtDescricao
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(412, 251);
+            this.txtDescricao.Location = new System.Drawing.Point(412, 265);
             this.txtDescricao.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(262, 30);
@@ -61,7 +61,7 @@
             // txtValor
             // 
             this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValor.Location = new System.Drawing.Point(412, 190);
+            this.txtValor.Location = new System.Drawing.Point(412, 204);
             this.txtValor.Margin = new System.Windows.Forms.Padding(4);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(262, 30);
@@ -72,7 +72,7 @@
             this.btDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btDeletar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
             this.btDeletar.ForeColor = System.Drawing.Color.DarkRed;
-            this.btDeletar.Location = new System.Drawing.Point(412, 303);
+            this.btDeletar.Location = new System.Drawing.Point(412, 317);
             this.btDeletar.Margin = new System.Windows.Forms.Padding(4);
             this.btDeletar.Name = "btDeletar";
             this.btDeletar.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -98,7 +98,7 @@
             // txtPlaca
             // 
             this.txtPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlaca.Location = new System.Drawing.Point(38, 310);
+            this.txtPlaca.Location = new System.Drawing.Point(38, 324);
             this.txtPlaca.Margin = new System.Windows.Forms.Padding(4);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(262, 30);
@@ -107,7 +107,7 @@
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(38, 250);
+            this.txtMarca.Location = new System.Drawing.Point(38, 264);
             this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(262, 30);
@@ -116,7 +116,7 @@
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(38, 190);
+            this.txtModelo.Location = new System.Drawing.Point(38, 204);
             this.txtModelo.Margin = new System.Windows.Forms.Padding(4);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(262, 30);
@@ -151,7 +151,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Location = new System.Drawing.Point(354, 131);
+            this.panel1.Location = new System.Drawing.Point(354, 145);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(10, 220);
@@ -163,7 +163,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label4.Font = new System.Drawing.Font("Britannic Bold", 12F);
             this.label4.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label4.Location = new System.Drawing.Point(40, 284);
+            this.label4.Location = new System.Drawing.Point(40, 298);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 22);
@@ -176,7 +176,7 @@
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label9.Font = new System.Drawing.Font("Britannic Bold", 12F);
             this.label9.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label9.Location = new System.Drawing.Point(40, 224);
+            this.label9.Location = new System.Drawing.Point(40, 238);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 22);
@@ -189,7 +189,7 @@
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label10.Font = new System.Drawing.Font("Britannic Bold", 12F);
             this.label10.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label10.Location = new System.Drawing.Point(40, 164);
+            this.label10.Location = new System.Drawing.Point(40, 178);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(91, 22);
@@ -202,7 +202,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label7.Font = new System.Drawing.Font("Britannic Bold", 12F);
             this.label7.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label7.Location = new System.Drawing.Point(408, 225);
+            this.label7.Location = new System.Drawing.Point(408, 239);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(118, 22);
@@ -215,7 +215,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label8.Font = new System.Drawing.Font("Britannic Bold", 12F);
             this.label8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label8.Location = new System.Drawing.Point(408, 168);
+            this.label8.Location = new System.Drawing.Point(408, 182);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 22);
@@ -225,12 +225,12 @@
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label1.Font = new System.Drawing.Font("Britannic Bold", 12F);
+            this.label1.Font = new System.Drawing.Font("Britannic Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(365, 128);
+            this.label1.Location = new System.Drawing.Point(412, 142);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 25);
+            this.label1.Size = new System.Drawing.Size(262, 25);
             this.label1.TabIndex = 75;
             this.label1.Text = "INFORMAÇÕES DA MULTA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -238,12 +238,12 @@
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label2.Font = new System.Drawing.Font("Britannic Bold", 12F);
+            this.label2.Font = new System.Drawing.Font("Britannic Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label2.Location = new System.Drawing.Point(34, 128);
+            this.label2.Location = new System.Drawing.Point(38, 142);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(284, 25);
+            this.label2.Size = new System.Drawing.Size(282, 25);
             this.label2.TabIndex = 74;
             this.label2.Text = "INFORMAÇÕES DO VEÍCULO";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -252,7 +252,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label3.Location = new System.Drawing.Point(115, 383);
+            this.label3.Location = new System.Drawing.Point(115, 397);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(481, 23);
@@ -264,7 +264,7 @@
             // 
             this.label11.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label11.Location = new System.Drawing.Point(115, 363);
+            this.label11.Location = new System.Drawing.Point(115, 377);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(481, 20);
@@ -277,7 +277,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(707, 427);
+            this.ClientSize = new System.Drawing.Size(707, 438);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label1);

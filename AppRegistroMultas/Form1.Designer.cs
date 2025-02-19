@@ -36,6 +36,7 @@
             this.btDeletarMulta = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btDeletarVeiculo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btConsulta
@@ -44,7 +45,7 @@
             this.btConsulta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btConsulta.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btConsulta.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btConsulta.Location = new System.Drawing.Point(318, 128);
+            this.btConsulta.Location = new System.Drawing.Point(176, 177);
             this.btConsulta.Margin = new System.Windows.Forms.Padding(4);
             this.btConsulta.Name = "btConsulta";
             this.btConsulta.Size = new System.Drawing.Size(247, 33);
@@ -119,7 +120,7 @@
             this.btDeletarMulta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btDeletarMulta.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDeletarMulta.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btDeletarMulta.Location = new System.Drawing.Point(28, 128);
+            this.btDeletarMulta.Location = new System.Drawing.Point(318, 125);
             this.btDeletarMulta.Margin = new System.Windows.Forms.Padding(4);
             this.btDeletarMulta.Name = "btDeletarMulta";
             this.btDeletarMulta.Size = new System.Drawing.Size(248, 33);
@@ -132,7 +133,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(47, 186);
+            this.label1.Location = new System.Drawing.Point(49, 226);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(481, 20);
@@ -144,7 +145,7 @@
             // 
             this.label2.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label2.Location = new System.Drawing.Point(47, 206);
+            this.label2.Location = new System.Drawing.Point(49, 252);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(481, 23);
@@ -152,12 +153,28 @@
             this.label2.Text = "Dhuliana Paula de Assis Geronimo - 2ºA Informática";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btDeletarVeiculo
+            // 
+            this.btDeletarVeiculo.BackColor = System.Drawing.SystemColors.Window;
+            this.btDeletarVeiculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btDeletarVeiculo.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDeletarVeiculo.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btDeletarVeiculo.Location = new System.Drawing.Point(28, 125);
+            this.btDeletarVeiculo.Margin = new System.Windows.Forms.Padding(4);
+            this.btDeletarVeiculo.Name = "btDeletarVeiculo";
+            this.btDeletarVeiculo.Size = new System.Drawing.Size(248, 33);
+            this.btDeletarVeiculo.TabIndex = 76;
+            this.btDeletarVeiculo.Text = "DELETAR VEÍCULOS";
+            this.btDeletarVeiculo.UseVisualStyleBackColor = false;
+            this.btDeletarVeiculo.Click += new System.EventHandler(this.btDeletarVeiculo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(592, 238);
+            this.ClientSize = new System.Drawing.Size(592, 297);
+            this.Controls.Add(this.btDeletarVeiculo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btDeletarMulta);
@@ -182,6 +199,7 @@
         private System.Windows.Forms.Button btDeletarMulta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btDeletarVeiculo;
     }
 }
 

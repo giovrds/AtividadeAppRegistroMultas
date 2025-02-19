@@ -26,11 +26,11 @@ namespace AppRegistroMultas.Formulario
             listaVeiculos = veiculoContext.ListarVeiculos();
 
             MultaContext multaContext = new MultaContext();
-            listaMulta = multaContext.ListarMultas(); // Corrigido
+            listaMulta = multaContext.ListarMultas(); 
 
             cbVeiculo.DataSource = listaVeiculos.ToList();
             cbVeiculo.DisplayMember = "Placa";
-            cbVeiculo.SelectedIndex = -1; // Deixar combobox em branco
+            cbVeiculo.SelectedIndex = -1;
         }
 
         private void cbVeiculo_SelectedIndexChanged(object sender, EventArgs e)

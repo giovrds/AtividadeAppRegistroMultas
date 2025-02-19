@@ -143,6 +143,12 @@
     <Compile Include="Formulario\FormDeletarMulta.Designer.cs">
       <DependentUpon>FormDeletarMulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulario\FormDeletarVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\FormDeletarVeiculo.Designer.cs">
+      <DependentUpon>FormDeletarVeiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Multa.cs" />
     <Compile Include="Models\Veiculo.cs" />
     <Compile Include="Program.cs" />
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario\FormDeletarMulta.resx">
       <DependentUpon>FormDeletarMulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario\FormDeletarVeiculo.resx">
+      <DependentUpon>FormDeletarVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

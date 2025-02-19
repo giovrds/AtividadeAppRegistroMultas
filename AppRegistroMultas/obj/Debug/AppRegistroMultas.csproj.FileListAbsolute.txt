@@ -73,3 +73,4 @@ C:\Users\Giovanna\Downloads\AppRegistroMultas\AppRegistroMultas\AppRegistroMulta
 C:\Users\Giovanna\Downloads\AppRegistroMultas\AppRegistroMultas\AppRegistroMultas\obj\Debug\AppRegistroMultas.Formulario.FormAtualizarVeiculo.resources
 C:\Users\Giovanna\Downloads\AppRegistroMultas\AppRegistroMultas\AppRegistroMultas\obj\Debug\AppRegistroMultas.Formulario.FormAtualizarMulta.resources
 C:\Users\Giovanna\Downloads\AppRegistroMultas\AppRegistroMultas\AppRegistroMultas\obj\Debug\AppRegistroMultas.Formulario.FormDeletarMulta.resources
+C:\Users\Giovanna\Downloads\AppRegistroMultas\AppRegistroMultas\AppRegistroMultas\obj\Debug\AppRegistroMultas.Formulario.FormDeletarVeiculo.resources
