@@ -42,7 +42,7 @@ namespace AppRegistroMultas.Formulario
 
                 VeiculoContext context = new VeiculoContext();
                 context.DeletarVeiculo(veiculosSelec);
-                MessageBox.Show($"ID:{(veiculosSelec.Id).ToString()} " + "ATUALIZADO COM SUCESSO!", "2ºA INF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"ID:{(veiculosSelec.Id).ToString()} " + "DELETADO COM SUCESSO!", "2ºA INF", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 comboBox1.SelectedIndex = -1;
                 txtMarca.Clear();

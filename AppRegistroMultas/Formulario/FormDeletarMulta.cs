@@ -42,7 +42,7 @@ namespace AppRegistroMultas.Formulario
                 MultaContext context = new MultaContext();
                 context.DeletarMulta(multaSelecionada);
 
-                MessageBox.Show($"ID:{multaSelecionada.Id} ATUALIZADO COM SUCESSO!", "2AINF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"ID:{multaSelecionada.Id} DELETADO COM SUCESSO!", "2AINF", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 cbVeiculo.SelectedIndex = -1;
                 txtMarca.Clear();
